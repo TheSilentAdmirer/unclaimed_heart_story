@@ -116,6 +116,14 @@ body { font-family: 'Roboto', sans-serif; background:#111; color:#fff; overflow-
   50% { transform: translateY(-15px) rotate(-10deg); }
   100% { transform: translateY(0) rotate(10deg); }
 }
+
+/* Mobile adjustments */
+@media(max-width:600px){
+  .event-block { padding: 30px 20px; min-height: 80vh; }
+  .event-block h2 .event-title { font-size:28px; }
+  .poetry { font-size:16px; }
+  .event-block.first-last h2 .event-title { font-size:36px; }
+}
 </style>
 </head>
 <body>
@@ -140,7 +148,7 @@ for(let i=0;i<emojiCount;i++){
 <div class="event-block first-last">
 <h2>
   <span class="beer-glass">🍻</span>
-  <span class="event-title" style="font-weight: bold; color: black;">Happy Birthday Sushma!</span>
+  <span class="event-title">Happy Birthday Sushma!</span>
   <span class="beer-glass">🍻</span>
 </h2>
 <div class="poetry">
@@ -225,7 +233,7 @@ for(let i=0;i<emojiCount;i++){
 
 <!-- Event 3 -->
 <div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/8QcMrJNAsCu5vheMA" target="_blank">Bowled Over</a> <span class="event-date"></span></h2>
+<h2><a class="event-title" href="https://maps.app.goo.gl/8QcMrJNAsCu5vheMA" target="_blank">Bowled Over</a> <span class="event-date">2 July</span></h2>
 <div class="poetry">
 <div class="stanza">
 <p>On the box cricket field, I tried my best,</p>
@@ -349,7 +357,7 @@ for(let i=0;i<emojiCount;i++){
 
 <!-- Event 9 -->
 <div class="event-block">
-<h2><a class="event-title" href="#" target="_blank">Jungle Secrets</a> <span class="event-date"></span></h2>
+<h2><a class="event-title" href="#" target="_blank">Jungle Secrets</a> <span class="event-date">5 Sep</span></h2>
 <div class="poetry">
 <div class="stanza">
 <p>Our kisses trembling with fear and desire,</p>
@@ -417,7 +425,7 @@ for(let i=0;i<emojiCount;i++){
 </div>
 
 <script>
-// Typing animation for paragraphs (slower: 0.5x)
+// Typing animation for paragraphs
 function typeParagraphSequential(lines, delay=80, lineDelay=800){ 
   lines.forEach((p, index) => {
     p.style.visibility = 'visible';
