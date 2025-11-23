@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Love Story</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Password Protection Script -->
+<script>
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pw = urlParams.get('pw'); // Get password from URL
+    if(pw !== '0601'){ 
+        alert("Wrong password!"); 
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>"; 
+    }
+};
+</script>
+
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Roboto', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
