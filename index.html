@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Love Story</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Password Protection Script -->
+<script>
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pw = urlParams.get('pw'); // Get password from URL
+    if(pw !== '0601'){ 
+        alert("Wrong password!"); 
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>"; 
+    }
+};
+</script>
+
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Roboto', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
@@ -104,21 +117,41 @@ body { font-family: 'Roboto', sans-serif; background:#111; color:#fff; overflow-
   50% { transform: translateY(-15px) rotate(-10deg); }
   100% { transform: translateY(0) rotate(10deg); }
 }
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 15px;
+    gap: 40px;
+  }
+  .event-block {
+    min-height: auto;
+    padding: 40px 15px;
+  }
+  .event-block h2 .event-title {
+    font-size: 24px;
+  }
+  .event-block h2 .event-date {
+    font-size: 14px;
+  }
+  .poetry {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .event-block.first-last h2 .event-title {
+    font-size: 36px;
+  }
+  .scroll-indicator {
+    font-size: 20px;
+    bottom: 15px;
+  }
+  .emoji {
+    font-size: 20px;
+  }
+}
 </style>
-
-<!-- Password Handling Script -->
-<script>
-window.onload = function() {
-    let entered = prompt("Enter password:");
-    if(entered === "0601") {
-        document.body.style.display = "block"; // show page
-    } else {
-        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>";
-    }
-};
-</script>
-
-<body style="display:none;">
+</head>
+<body>
 
 <!-- Floating hearts -->
 <script>
@@ -156,9 +189,59 @@ for(let i=0;i<emojiCount;i++){
 <div class="scroll-indicator">⬇️</div>
 </div>
 
-<!-- Event Blocks 1-11 and Last Page -->
-<!-- Paste all your existing event blocks here exactly as-is -->
-<!-- DO NOT change a single line -->
+<!-- All other events here… Keep your original HTML intact -->
+
+<!-- Event 1 -->
+<div class="event-block">
+<h2><a class="event-title" href="https://maps.app.goo.gl/y1ua36iZJ3gJsMLZ8" target="_blank">First Date - Windmill Whispers</a> <span class="event-date">20 June</span></h2>
+<div class="poetry">
+<div class="stanza">
+<p>A windmill turning slow.</p>
+<p>Our first beer.</p>
+<p>Your eyes speaking quietly to mine.</p>
+<p>A comfort I didn’t expect.</p>
+<p>A spark I didn’t understand yet.</p>
+</div>
+<div class="stanza">
+<p>The bike ride after—</p>
+<p>cool air, soft silence, shared space.</p>
+<p>Your hand on my shoulder—warm, gentle, grounding.</p>
+<p>A touch that stayed in my mind long after.</p>
+</div>
+<div class="stanza">
+<p>And somewhere inside,</p>
+<p>a small wish began—</p>
+<p>a simple side hug, someday.</p>
+</div>
+<div class="stanza">
+<p>A tiny beginning.</p>
+<p>A quiet start.</p>
+<p>But it was the start of us.</p>
+</div>
+</div>
+<div class="scroll-indicator">⬇️</div>
+</div>
+
+<!-- Event 2, 3 … continue all your events exactly as in your original file -->
+
+<!-- Last Page -->
+<div class="event-block first-last">
+<h2>
+  <span class="beer-glass">🍻</span>
+  <span class="event-title">Forever Us</span>
+  <span class="beer-glass">🍻</span>
+</h2>
+<div class="poetry">
+<div class="stanza">
+<p>If there’s one truth my heart knows now,</p>
+<p>it’s that you’re the warmth I return to,</p>
+<p>the chaos I crave,</p>
+<p>the softness I fall into,</p>
+<p>and the story I want to keep writing —</p>
+<p>again, again, and always.</p>
+</div>
+</div>
+</div>
 
 </div>
 
