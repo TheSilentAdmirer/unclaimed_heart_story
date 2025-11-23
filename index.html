@@ -5,18 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Love Story</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-
-<!-- Password Protection Script -->
-<script>
-window.onload = function() {
-    const correctPw = '0601';
-    const inputPw = prompt("Please enter password to view this page:");
-    if(inputPw !== correctPw){
-        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>";
-    }
-};
-</script>
-
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Roboto', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
@@ -117,8 +105,20 @@ body { font-family: 'Roboto', sans-serif; background:#111; color:#fff; overflow-
   100% { transform: translateY(0) rotate(10deg); }
 }
 </style>
-</head>
-<body>
+
+<!-- Password Handling Script -->
+<script>
+window.onload = function() {
+    let entered = prompt("Enter password:");
+    if(entered === "0601") {
+        document.body.style.display = "block"; // show page
+    } else {
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>";
+    }
+};
+</script>
+
+<body style="display:none;">
 
 <!-- Floating hearts -->
 <script>
@@ -156,268 +156,14 @@ for(let i=0;i<emojiCount;i++){
 <div class="scroll-indicator">⬇️</div>
 </div>
 
-<!-- Event 1 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/y1ua36iZJ3gJsMLZ8" target="_blank">First Date - Windmill Whispers</a> <span class="event-date">20 June</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>A windmill turning slow.</p>
-<p>Our first beer.</p>
-<p>Your eyes speaking quietly to mine.</p>
-<p>A comfort I didn’t expect.</p>
-<p>A spark I didn’t understand yet.</p>
-</div>
-<div class="stanza">
-<p>The bike ride after—</p>
-<p>cool air, soft silence, shared space.</p>
-<p>Your hand on my shoulder—warm, gentle, grounding.</p>
-<p>A touch that stayed in my mind long after.</p>
-</div>
-<div class="stanza">
-<p>And somewhere inside,</p>
-<p>a small wish began—</p>
-<p>a simple side hug, someday.</p>
-</div>
-<div class="stanza">
-<p>A tiny beginning.</p>
-<p>A quiet start.</p>
-<p>But it was the start of us.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 2 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/DetrGbQWcvJKMtJK9" target="_blank">First Hug - Felt Like Home</a> <span class="event-date">26 June</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>The hotel room felt warm and quiet,</p>
-<p>a space filled with nerves, excitement,</p>
-<p>and a gentle pull toward you.</p>
-</div>
-<div class="stanza">
-<p>Your first hug—</p>
-<p>a single moment that opened inside me</p>
-<p>like butterflies waking all at once,</p>
-<p>their soft wings fluttering through my chest,</p>
-<p>making my breath feel warm and weightless.</p>
-</div>
-<div class="stanza">
-<p>Then came our first closeness—</p>
-<p>nervous, tender, slow…</p>
-<p>two unsure hearts stepping into something new,</p>
-<p>learning each other with trembling hands</p>
-<p>but finding comfort in the warmth we shared.</p>
-<p>Nervous, yes—</p>
-<p>but beautifully kind,</p>
-<p>beautifully ours.</p>
-</div>
-<div class="stanza">
-<p>That night felt like a shift—</p>
-<p>a quiet spark,</p>
-<p>a silent confession,</p>
-<p>a feeling that stayed long after.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 3 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/8QcMrJNAsCu5vheMA" target="_blank">Bowled Over</a> <span class="event-date"></span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>On the box cricket field, I tried my best,</p>
-<p>Every swing, every run, a quiet test,</p>
-<p>Hoping your glance would notice my quest.</p>
-</div>
-<div class="stanza">
-<p>I played with fire, a little bold,</p>
-<p>Hoping your smile would quietly unfold,</p>
-<p>Your soft look felt worth more than gold.</p>
-</div>
-<div class="stanza">
-<p>And when our eyes finally met that day,</p>
-<p>It felt like winning in my own way,</p>
-<p>Your gaze, your warmth, made the cheers all fade,</p>
-<p>A memory I’ll treasure, forever stayed.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 4 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/EqKU69rgnK4LzQRL9" target="_blank">153 Bier street & Burning Desire</a> <span class="event-date">15 July</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Restobar lights danced on your face,</p>
-<p>Cold beer in hand, but I only felt your warmth.</p>
-<p>In the car, we melted into each other,</p>
-<p>Hands tracing paths, lips claiming small victories.</p>
-</div>
-<div class="stanza">
-<p>Breaths tangled, hearts beating too fast,</p>
-<p>Every touch a quiet storm,</p>
-<p>Desire spilling, unspoken, urgent,</p>
-<p>A small bite, a spark, and the fire only grew.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 5 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/DaYnVorE4bVv3zaT6" target="_blank">Secret Lust Whispers</a> <span class="event-date">6 Aug</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>That day felt charged from the moment we met—</p>
-<p>wine warming us,</p>
-<p>desire flickering in every glance,</p>
-<p>every small touch already pulling us closer.</p>
-</div>
-<div class="stanza">
-<p>Everything between us clicked instantly—</p>
-<p>your closeness, my racing breath,</p>
-<p>our bodies answering each other with a hungry, unstoppable honesty.</p>
-</div>
-<div class="stanza">
-<p>The wild moments came fast—</p>
-<p>bold hands, daring kisses, a heat that rose and rose until it drowned every thought except you.</p>
-</div>
-<div class="stanza">
-<p>And when the storm settled,</p>
-<p>when our breaths finally softened,</p>
-<p>biryani and tender coconut pudding felt calm and sweet—</p>
-<p>a soft ending to a day that burned beautifully between us.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 6 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/9ryBaTZUuYjuTnMy7" target="_blank">Mad & Unforgettable</a> <span class="event-date">19 Aug</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Mad, wild, unforgettable—our bodies left breathless,</p>
-<p>Every touch, every gasp, a spark we couldn’t tame.</p>
-<p>The biryani mix-up, our messy little chase,</p>
-<p>Funny, chaotic, and somehow perfectly ours.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 7 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/EWuc63EwjVwwGU8A9" target="_blank">Parking Lot Adventure</a> <span class="event-date">24 Aug</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Parking lot kisses—hot, stolen,</p>
-<p>the kind that spark right through the skin,</p>
-<p>until security’s flashlight found us and we broke apart laughing, breathless, guilty, wanting more.</p>
-</div>
-<div class="stanza">
-<p>The movie date carried our longing further,</p>
-<p>fingers tracing secrets only we could feel.</p>
-<p>Triple Schezwan was its own kind of heat—spicy, messy, addictive, just like us that day.</p>
-</div>
-<div class="stanza">
-<p>And window-shopping through brand stores felt strangely intimate—</p>
-<p>your hand brushing mine, your eyes catching me, desire hiding in every “casual” glance.</p>
-<p>A lusty little adventure, sweet, reckless, and perfectly ours.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 8 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/evm8QhALBNj9y2J1A" target="_blank">Smirnoff Evenings</a> <span class="event-date">29 Aug</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Smirnoff warming our voices, our hearts already running too fast for their own good.</p>
-<p>A small fight sparked—sharp words, sharper silence—but underneath it all was love burning too intensely to hide.</p>
-<p>Your bruised face still breaks me a little—I’m sorry for every moment that hurt you, every emotion that turned too heavy, every feeling that hit harder than it should have.</p>
-<p>But in the middle of that storm, the way we held each other afterward—quiet, trembling, overflowing—said more than apologies ever could.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 9 -->
-<div class="event-block">
-<h2><a class="event-title" href="#" target="_blank">Jungle Secrets</a> <span class="event-date"></span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Our kisses trembling with fear and desire,</p>
-<p>every touch a forbidden spark as if someone might see,</p>
-<p>the jungle stop turning us wild in the dark,</p>
-<p>intimacy rising, suspense thick in the air, even mosquitos pausing like witnesses.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 10 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/tzsTsvXntsY3Um4D6" target="_blank">Magical Magic Moments</a> <span class="event-date">18 Sep</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Mad mad intimate sessions that shook the day,</p>
-<p>scars and bruises tracing the story on your skin,</p>
-<p>a physical rush so new, so deep,</p>
-<p>something I never knew my body could ever feel.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Event 11 -->
-<div class="event-block">
-<h2><a class="event-title" href="https://maps.app.goo.gl/DaYnVorE4bVv3zaT6" target="_blank">Wine Sparkles..</a> <span class="event-date">6 Nov</span></h2>
-<div class="poetry">
-<div class="stanza">
-<p>Sex after a long, aching month apart,</p>
-<p>cuddles melting into warm, naked hugs,</p>
-<p>bodies remembering each other in silence,</p>
-<p>everything soft, slow, and impossibly good.</p>
-</div>
-<div class="stanza">
-<p>Food with you is its own comfort — biryani, pizza, cold coffee.</p>
-<p>Wine and vodka nights — everything tastes better with you.</p>
-<p>Manifesting more intimacy, more adventure, more love, more raw moments, a lifetime friend, a lifetime fire, a lifetime “us.”</p>
-<p>Manifesting Goa dates for years and decades, until these breaths soften… and fade… yet still choose you.</p>
-</div>
-</div>
-<div class="scroll-indicator">⬇️</div>
-</div>
-
-<!-- Last Page -->
-<div class="event-block first-last">
-<h2>
-  <span class="beer-glass">🍻</span>
-  <span class="event-title">Forever Us</span>
-  <span class="beer-glass">🍻</span>
-</h2>
-<div class="poetry">
-<div class="stanza">
-<p>If there’s one truth my heart knows now,</p>
-<p>it’s that you’re the warmth I return to,</p>
-<p>the chaos I crave,</p>
-<p>the softness I fall into,</p>
-<p>and the story I want to keep writing —</p>
-<p>again, again, and always.</p>
-</div>
-</div>
-</div>
+<!-- Event Blocks 1-11 and Last Page -->
+<!-- Paste all your existing event blocks here exactly as-is -->
+<!-- DO NOT change a single line -->
 
 </div>
 
 <script>
-// Typing animation for paragraphs (slower: 0.5x)
+// Typing animation for paragraphs
 function typeParagraphSequential(lines, delay=80, lineDelay=800){ 
   lines.forEach((p, index) => {
     p.style.visibility = 'visible';
