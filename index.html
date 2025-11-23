@@ -9,11 +9,10 @@
 <!-- Password Protection Script -->
 <script>
 window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const pw = urlParams.get('pw'); // Get password from URL
-    if(pw !== '0601'){ 
-        alert("Wrong password!"); 
-        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>"; 
+    const correctPw = '0601';
+    const inputPw = prompt("Please enter password to view this page:");
+    if(inputPw !== correctPw){
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; color:white;'>Access Denied</h1>";
     }
 };
 </script>
